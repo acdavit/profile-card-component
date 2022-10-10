@@ -1,0 +1,164 @@
+<!--
+--  
+--  BitCamp Assignment No.4 - Profile Card Component
+--
+--  Made by David Abakelia-Chartia (acdavit)
+--
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+  
+  :root{
+  	--circle-radius: calc((90vw + 90vh)/2);
+  	--card-width: 350px;
+  	--card-height: 374px;
+  	--profile-diameter: 96px;
+  }
+  body{
+  	background-color: #19a1ae;
+  	height: 100vh;
+  	display: flex;
+  	overflow:hidden;
+  	justify-content: space-between;
+  	align-items: center;
+  	font-family: 'Kumbh Sans', sans-serif;
+  }
+  .orb{
+  	width: var(--circle-radius);
+  	height: var(--circle-radius);
+  	position: absolute;
+  	z-index: 1;
+  }
+  #top-orb{
+  	top: calc(0px - (var(--circle-radius)/2));
+  	left: calc(0px - (var(--circle-radius)/3));
+  }
+  #bottom-orb{
+  	bottom: calc(0px - (var(--circle-radius)/2));
+  	right: calc(0px - (var(--circle-radius)/3));
+  }
+  #card-component{
+  	width: var(--card-width);
+  	height: var(--card-height);
+  	background-color: white;
+  	position: absolute;
+  	left: calc(50vw - var(--card-width)/2);
+  	z-index: 2;
+  	border-radius: 15px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  }
+  #album-photo{
+  	width: 100%;
+  }
+  #profile-photo{
+  	width: var(--profile-diameter);
+  	height: var(--profile-diameter);
+  	margin: 0px;
+  	margin-top: calc(0px - (var(--profile-diameter)/2));
+  	border: 5px solid white;
+  	border-radius: 50%;
+  }
+  #name{
+  	font-size: 18px;
+  	font-weight: 400;
+  	color: #2E3349;
+  	margin: 19px;
+  	line-height: 22px;
+  }
+  .bold{
+  	font-style: normal;
+  	font-weight: 700;
+  }
+  #city{
+  	font-size: 14px;
+  	font-weight: 400;
+  	color: #6b7082;
+  	margin: 0px;
+  	margin-top: -6px;
+  }
+  hr{
+  	width: 100%;
+  	margin: 0px;
+  	margin-top: 28px;
+  	border: 1px solid #e8e9ec
+  }
+  #bottom-bar{
+  	display: flex;
+  	width: 100%;
+  	justify-content: space-evenly;
+  	margin: 0px;
+  	padding: 0px;
+  }
+  .bottom-component{
+  	margin: 0px;
+  	padding: 0px;
+  }
+  .bottom-component > h1{
+  	font-size: 18px;
+  	font-weight: 700;
+  	text-align: center;
+  	margin-top: 17px;
+  	margin-bottom: 0;
+  	color: #2e3349;
+  }
+  .bottom-component > h2{
+  	font-size: 10px;
+  	font-weight: 400;
+  	text-align: center;
+  	margin-top: 2px;
+  	margin-bottom: 27;
+  	color: #6b7082;
+  }
+  </style>
+</head>
+<body>
+	<img
+		src="./images/bg-pattern-top.svg"
+		class="orb"
+		id="top-orb"
+	></div>
+	<div id="card-component">
+		<img
+			src="./images/bg-pattern-card.svg"
+			id="album-photo"
+		></img>
+		<img
+			src="./images/image-victor.jpg"
+			id="profile-photo"
+		></img>
+		<h1 id="name"><em class="bold">Victor Crest</em>&nbsp&nbsp26</h1>
+		<h2 id="city">London</h2>
+		<hr></hr>
+		<div id="bottom-bar">
+			<div class="bottom-component">
+				<h1>80K</h1>
+				<h2>Followers</h2>
+			</div>
+			<div class="bottom-component">
+				<h1>803K</h1>
+				<h2>Likes</h2>
+			</div>
+			<div class="bottom-component">
+				<h1>1.4K</h1>
+				<h2>Photos</h2>
+			</div>
+		</div>
+	</div>
+	<img
+		src="./images/bg-pattern-bottom.svg"
+		class="orb"
+		id="bottom-orb"
+	></div>
+</body>
+</html>
